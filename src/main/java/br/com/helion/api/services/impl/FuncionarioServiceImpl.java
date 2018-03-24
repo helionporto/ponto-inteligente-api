@@ -12,10 +12,10 @@ import br.com.helion.api.repositories.FuncionarioRepository;
 import br.com.helion.api.services.FuncionarioService;
 
 @Service
-public class FuncionarioServiceImpl implements FuncionarioService {
+public class FuncionarioServiceImpl implements FuncionarioService{
 	
 	private static final Logger log = LoggerFactory.getLogger(FuncionarioServiceImpl.class);
-
+	
 	@Autowired
 	private FuncionarioRepository funcionarioRepository;
 	
@@ -36,10 +36,8 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	
 	public Optional<Funcionario> buscarPorId(Long id) {
 		log.info("Buscando funcionário pelo IDl {}", id);
-		return Optional.ofNullable(this.funcionarioRepository.findOne(id));
+		
+		return Optional.ofNullable(this.funcionarioRepository.getOne(id));
 	}
-
-	
-
 
 }
