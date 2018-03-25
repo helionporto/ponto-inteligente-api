@@ -8,8 +8,7 @@ import java.util.Optional;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.BDDMockito;
-import org.mockito.Mockito;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -18,6 +17,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import br.com.helion.api.entities.Empresa;
 import br.com.helion.api.repositories.EmpresaRepository;
+import org.mockito.BDDMockito;
+import org.mockito.Mockito;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
